@@ -1,2 +1,2 @@
 # LAF
-LAF Project Built with Python, Django
+LostAndFound Project Built with Python, Django
