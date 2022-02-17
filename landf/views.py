@@ -1,16 +1,18 @@
 import django.views.defaults
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Post, User
 
-registered = True
+registered = False
 
 
 def home(request):
     context = {
         'title': 'Home',
-        'registered': registered
+        'registered': registered,
+        'posts': Post.objects.all()
     }
-    return render(request, 'landf/home.html',context)
+    return render(request, 'landf/home.html', context)
 
 
 def about(request):
@@ -24,7 +26,7 @@ def about(request):
 def profile(request):
     context = {
         'title': 'Profile',
-        'registered': registered
+        'registered': registered,
     }
     return render(request, 'landf/profile.html', context)
 
@@ -51,3 +53,11 @@ def error(request):
     }
     print("This is called")
     return render(request, 'landf/error404.html', context)
+
+
+def contact(request):
+    context = {
+        'title': 'Contact',
+        'registered': registered
+    }
+    return render(request, 'landf/contact.html', context)

@@ -1,4 +1,30 @@
 {% extends 'landf/index.html' %}
 {% block content %}
-    <h1>Register</h1>
+        <div class="row justify-content-md-center col-6 offset-6 text-center">
+            <form class="needs-validation">
+                <h2 class="mb-3">Register</h2>
+                <div class="mb-3">
+                    <label for="usernameInput" class="form-label">Username</label>
+                    <input type="email" class="form-control" id="usernameInput" aria-describedby="username" placeholder="Here goes your username">
+                </div>
+                <div class="mb-3">
+                    <label for="InputEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Here goes your email">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="birthdayInput" class="form-label">Birthday</label>
+                    <input type="date" class="form-control" id="birthdayInput" aria-describedby="birthday" min="1940-01-01" max="2040-12-31" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                </div>
+                <div class="mb-3">
+                    <label for="InputPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="InputPassword" placeholder="Here goes your password">
+                </div>
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Here goes your password again">
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </div>
 {% endblock %}

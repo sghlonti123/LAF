@@ -9,6 +9,8 @@ urlpatterns = [
     path('about/', views.about, name="landf-about"),
     path('profile/', views.profile, name="landf-profile"),
     path('login/', views.login, name="landf-login"),
-    path('register/', views.register, name="landf-registrer"),
+    # path('register/', views.register, name="landf-register"),
     # path('*/', views.error, name="landf-error")
+    path('contact/', views.contact, name="landf-contact"),
+
 ]
